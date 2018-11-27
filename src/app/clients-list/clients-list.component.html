@@ -1,0 +1,28 @@
+<app-index> </app-index>
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>Email</th>
+          <th style="width: 60px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of clients_list">
+          <td>{{client.id}}</td>
+          <td>{{client.nome}}</td>
+          <td>{{client.telefone1}}</td>
+          <td>{{client.email}}</td>
+          <td>
+          	<button type="button" class="btn btn-primary btn-circle"><i class="fa fa-user"></i></button>
+          </td>
+          <td>
+            <button (click)="delete(client)" type="button" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-remove"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
